@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HiltMultiModule" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/darkBlue</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="customTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@drawable/color_state_list_box_stroke_color</item>
+        <item name="hintTextColor">@color/textGray</item>
+        <item name="android:textColorHint">@color/textGray</item>
+        <item name="endIconTint">@color/golden</item>
+    </style>
+
+    <style name="customTextInputEditField">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHighlight">@color/golden</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_color</item>
+        <item name="android:maxLines">1</item>
+    </style>
+</resources>

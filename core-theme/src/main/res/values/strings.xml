@@ -1,0 +1,15 @@
+<resources>
+    <!-- register feature strings -->
+    <string name="welcome">Welcome to DW</string>
+    <string name="createYourAccount">Create your account</string>
+    <string name="mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="repeatPassword">Repeat password</string>
+    <string name="createAnAccount">Create an account</string>
+    <string name="alreadyHaveAnAccount">Already have an account?</string>
+    <string name="logIn">Log in</string>
+
+    <!-- login feature strings -->
+    <string name="dontHaveAnAccount">Don\'t have an account?</string>
+    <string name="signUp">Sign up</string>
+</resources>

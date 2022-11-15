@@ -1,0 +1,138 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="winged.example.feature_login.register.RegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkBlue">
+
+        <TextView
+            android:id="@+id/welcomeToDwTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/welcome"
+            android:textColor="@android:color/white"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/createYourAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createYourAccount"
+            android:textColor="@color/golden"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/welcomeToDwTV"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeToDwTV" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTIL"
+            style="@style/customTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/mail"
+            app:endIconDrawable="@drawable/ic_email"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/createYourAccountTV"
+            app:layout_constraintTop_toBottomOf="@+id/createYourAccountTV">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailTIET"
+                style="@style/customTextInputEditField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTIL"
+            style="@style/customTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="@+id/emailTIL"
+            app:layout_constraintStart_toStartOf="@+id/emailTIL"
+            app:layout_constraintTop_toBottomOf="@+id/emailTIL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTIET"
+                style="@style/customTextInputEditField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/repeatPasswordTIL"
+            style="@style/customTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/repeatPassword"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
+            app:layout_constraintStart_toStartOf="@+id/passwordTIL"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTIL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/repeatPasswordTIET"
+                style="@style/customTextInputEditField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/createAnAccountBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/lightGray"
+            android:padding="15dp"
+            android:text="@string/createAnAccount"
+            android:textColor="@color/golden"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/repeatPasswordTIL"
+            app:layout_constraintStart_toStartOf="@+id/repeatPasswordTIL"
+            app:layout_constraintTop_toBottomOf="@+id/repeatPasswordTIL" />
+
+        <TextView
+            android:id="@+id/alreadyHaveAnAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/alreadyHaveAnAccount"
+            android:textColor="@color/textGray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/createAnAccountBTN"
+            app:layout_constraintStart_toStartOf="@+id/createAnAccountBTN"
+            app:layout_constraintTop_toBottomOf="@+id/createAnAccountBTN" />
+
+        <TextView
+            android:id="@+id/logInTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/logIn"
+            android:textColor="@color/golden"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/alreadyHaveAnAccountTV"
+            app:layout_constraintStart_toStartOf="@+id/alreadyHaveAnAccountTV"
+            app:layout_constraintTop_toBottomOf="@+id/alreadyHaveAnAccountTV" />
+
+        <!-- TODO: find the name of the text selection handles and change the color-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
