@@ -25,5 +25,10 @@
         <item name="android:textColorHighlight">@color/golden</item>
         <item name="android:textCursorDrawable">@drawable/cursor_color</item>
         <item name="android:maxLines">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSelectHandle">@android:drawable/arrow_up_float</item>
+        <item name="android:textSelectHandleLeft">@android:drawable/arrow_up_float</item>
+        <item name="android:textSelectHandleRight">@android:drawable/arrow_up_float</item>
     </style>
 </resources>

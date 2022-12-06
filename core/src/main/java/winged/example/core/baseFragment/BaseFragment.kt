@@ -8,9 +8,13 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 
-// just a "helper" class, prevents boiler plate code
+/**
+ * A class that manages binding variable for fragments,
+ * it also contains navigation functions
+ */
 abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val fragmentRes: Int) : Fragment() {
     private var _binding: T? = null
     val binding get() = _binding!!
@@ -29,8 +33,12 @@ abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val fragment
         _binding = null
     }
 
-    fun navigateTo(targetDestination: Int) {
-        findNavController().navigate(targetDestination)
+    fun navigateTo(targetDestination: Int, popUpToInclusive: Boolean = false) {
+        findNavController().navigate(
+            targetDestination,
+            null,
+            NavOptions.Builder().setPopUpTo(targetDestination, popUpToInclusive).build()
+        )
     }
 
     fun navigateUp() {

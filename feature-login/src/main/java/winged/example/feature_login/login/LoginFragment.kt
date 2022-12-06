@@ -54,4 +54,12 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(R.layout.fragment_login
             }
         }
     }
+
+    override fun onDestroyView() {
+        // getting rid of ALL of the listeners, even the ones I did not set.
+        // see ListenerAwareEditText comment
+        binding.emailTIET.clearTextChangedListeners()
+        binding.passwordTIET.clearTextChangedListeners()
+        super.onDestroyView()
+    }
 }

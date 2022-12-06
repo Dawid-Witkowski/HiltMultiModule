@@ -7,5 +7,4 @@ import winged.example.core_data.di.DatabaseModule
 
 @Module(includes = [DatabaseModule::class])
 @InstallIn(SingletonComponent::class)
-object AppModule {
-}
+object AppModule

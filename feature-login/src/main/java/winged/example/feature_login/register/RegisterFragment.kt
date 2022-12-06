@@ -25,7 +25,7 @@ class RegisterFragment: BaseFragment<FragmentRegisterBinding>(R.layout.fragment_
 
     private fun setUpTextRedirection() {
         binding.logInTV.setOnClickListener {
-            navigateTo(R.id.loginFragment)
+            navigateTo(R.id.loginFragment, true)
         }
     }
 
@@ -50,5 +50,14 @@ class RegisterFragment: BaseFragment<FragmentRegisterBinding>(R.layout.fragment_
                 Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun onDestroyView() {
+        // getting rid of ALL of the listeners, even the ones I did not set.
+        // see ListenerAwareEditText comment
+        binding.emailTIET.clearTextChangedListeners()
+        binding.passwordTIET.clearTextChangedListeners()
+        binding.repeatPasswordTIET.clearTextChangedListeners()
+        super.onDestroyView()
     }
 }

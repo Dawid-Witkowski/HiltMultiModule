@@ -15,5 +15,5 @@ fun String.isAValidEmail(): Boolean {
 }
 
 fun TextInputEditText.extractText(): String {
-    return this.text.toString()
+    return this.text.toString().trim()
 }

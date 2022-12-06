@@ -46,7 +46,7 @@
             app:layout_constraintStart_toStartOf="@+id/createYourAccountTV"
             app:layout_constraintTop_toBottomOf="@+id/createYourAccountTV">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <winged.example.core.utils.ListenerAwareEditText
                 android:id="@+id/emailTIET"
                 style="@style/customTextInputEditField"
                 android:layout_width="match_parent"
@@ -66,7 +66,7 @@
             app:layout_constraintStart_toStartOf="@+id/emailTIL"
             app:layout_constraintTop_toBottomOf="@+id/emailTIL">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <winged.example.core.utils.ListenerAwareEditText
                 android:id="@+id/passwordTIET"
                 style="@style/customTextInputEditField"
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
             app:layout_constraintStart_toStartOf="@+id/passwordTIL"
             app:layout_constraintTop_toBottomOf="@+id/passwordTIL">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <winged.example.core.utils.ListenerAwareEditText
                 android:id="@+id/repeatPasswordTIET"
                 style="@style/customTextInputEditField"
                 android:layout_width="match_parent"
