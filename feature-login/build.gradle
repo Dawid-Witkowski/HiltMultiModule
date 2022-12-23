@@ -6,7 +6,6 @@ plugins {
 }
 
 android {
-    namespace 'winged.example.feature_login'
     compileSdk 33
 
     defaultConfig {

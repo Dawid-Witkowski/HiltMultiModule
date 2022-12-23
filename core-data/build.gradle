@@ -6,7 +6,6 @@ plugins {
 }
 
 android {
-    namespace 'winged.example.core_data'
     compileSdk 33
 
     defaultConfig {

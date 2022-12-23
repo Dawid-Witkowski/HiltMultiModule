@@ -5,7 +5,6 @@ plugins {
 }
 
 android {
-    namespace 'winged.example.core_theme'
     compileSdk 33
 
     defaultConfig {
